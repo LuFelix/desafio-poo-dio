@@ -1,0 +1,75 @@
+Curso cursoA = new Curso();
+        cursoA.setTitulo("Java Avançado");
+        cursoA.setDescricao("Aprenda Java e ingresse no mercado de trabalho ");
+        cursoA.setCargaHoraria(40);
+
+        Curso cursoB = new Curso();
+        cursoB.setTitulo("Java Spring");
+        cursoB.setDescricao("Aprenda Esse framework e se profissionalize ");
+        cursoB.setCargaHoraria(40);
+        System.out.println(cursoA);
+        System.out.println(cursoB);
+
+        Mentoria mentoriaA = new Mentoria();
+        mentoriaA.setTitulo("Mentoria SOLID");
+        mentoriaA.setDescricao("Aprenda boas práticas SOLID com a Mentora");
+        mentoriaA.setData(LocalDate.now());
+        System.out.println(mentoriaA);
+
+        Bootcamp bootcamp1 = new Bootcamp();
+        bootcamp1.setNome("Bootcamp BancoPAN");
+        bootcamp1.setDescricao("Desenvolvedor FullStack Java Banco Pan");
+        bootcamp1.getConteudos().add(cursoA);
+        bootcamp1.getConteudos().add(cursoB);
+        bootcamp1.getConteudos().add(mentoriaA);
+        System.out.println("--\t Início do sistema \t--");
+        Dev dev1 = new Dev();
+        dev1.setNome("Luciano Felix");
+        System.out.println(dev1.getNome());
+        System.out.println("Conteudos Inscritos" + dev1.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev1.getConteudosConcluidos());
+        Dev dev2 = new Dev();
+        dev2.setNome("Marcos Albuquerque");
+        System.out.println(dev2.getNome());
+        System.out.println("Conteudos Inscritos" + dev2.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev2.getConteudosConcluidos());
+
+        dev1.inscreverBootcamp(bootcamp1);
+        dev2.inscreverBootcamp(bootcamp1);
+
+        System.out.println("--\t Devs Matriculados \t--");
+        System.out.println(dev1.getNome());
+        System.out.println("Conteudos Inscritos" + dev1.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev1.getConteudosConcluidos());
+        System.out.println("--");
+        System.out.println(dev2.getNome());
+        System.out.println("Conteudos Inscritos" + dev2.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev2.getConteudosConcluidos());
+        System.out.println("--\t Devs após primeira progressão \t--");
+        dev1.progredir();
+        dev2.progredir();
+        System.out.println(dev1.getNome());
+        System.out.println("Conteudos Inscritos" + dev1.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev1.getConteudosConcluidos());
+        System.out.println("XP "+dev1.calcularTotalXP());
+        System.out.println("--");
+        System.out.println(dev2.getNome());
+        System.out.println("Conteudos Inscritos" + dev2.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev2.getConteudosConcluidos());
+        System.out.println("XP "+dev2.calcularTotalXP());
+
+        System.out.println("--\t Devs após segunda progressão \t--");
+        dev1.progredir();
+        dev1.progredir();
+        dev2.progredir();
+        System.out.println(dev1.getNome());
+        System.out.println("Conteudos Inscritos" + dev1.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev1.getConteudosConcluidos());
+        System.out.println("XP " + dev1.calcularTotalXP());
+        System.out.println("--");
+        System.out.println(dev2.getNome());
+        System.out.println("Conteudos Inscritos" + dev2.getConteudosIncritos());
+        System.out.println("Conteudos Concluidos" + dev2.getConteudosConcluidos());
+        System.out.println("XP " + dev2.calcularTotalXP());
+
+        System.out.println("--\t Fim da Execução \t--");
