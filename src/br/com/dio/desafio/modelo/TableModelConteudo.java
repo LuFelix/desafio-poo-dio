@@ -1,4 +1,4 @@
-package br.com.dio.desafio.models;
+package br.com.dio.desafio.modelo;
 
 public class TableModelConteudo {
 }

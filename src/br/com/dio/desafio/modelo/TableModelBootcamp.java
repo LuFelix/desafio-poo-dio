@@ -1,10 +1,8 @@
-package br.com.dio.desafio.models;
+package br.com.dio.desafio.modelo;
 
 import br.com.dio.desafio.dominio.Bootcamp;
 
-import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
 
 public class TableModelBootcamp extends AbstractTableModel {
     private Bootcamp bootcamp;

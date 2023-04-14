@@ -1,7 +1,4 @@
-import br.com.dio.desafio.dominio.*;
-import br.com.dio.desafio.view.FrmApp;
-
-import java.time.LocalDate;
+import br.com.dio.desafio.visao.FrmApp;
 
 public class Main {
     /**
